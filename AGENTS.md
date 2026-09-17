@@ -11,10 +11,11 @@ This repository develops a simple, reusable structure for engineering documentat
 
 ## Task-specific guidances
 
-Read the relevant guide before starting a matching task. Load other documentation only as needed. Row format and growth rules: [Writing docs and agent context](docs/documentation.md).
+Read the relevant guide before starting a matching task. Load other documentation only as needed. Row format and growth rules: [AGENTS.md's task table](docs/task-table.md).
 
 | Trigger | Guide |
 | --- | --- |
 | `/graphify`, or codebase/architecture/file-relationship questions | [Graphify](docs/graphify.md) |
 | Agent/harness support, or adding a skill | [Deduplication policy](docs/deduplication.md) |
 | Writing or editing any doc here | [Writing docs and agent context](docs/documentation.md) |
+| Modifying AGENTS.md's task table | [Task table](docs/task-table.md) |
