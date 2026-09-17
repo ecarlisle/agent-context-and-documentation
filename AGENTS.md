@@ -15,5 +15,6 @@ Read the relevant guide before starting a matching task. Load other documentatio
 
 | Task | Guide |
 | --- | --- |
-| Run `/graphify`, answer codebase or architecture questions, explore file relationships, or modify code | [Graphify](docs/graphify.md) |
+| Explicitly run `/graphify`, or answer a codebase/architecture/file-relationship question (use the graph if `graphify-out/` exists, else consider suggesting one) | [Graphify](docs/graphify.md) |
 | Add or change support for a coding agent/harness, or add a skill | [Deduplication policy](docs/deduplication.md) |
+| Write, restructure, or review any doc in this repo (including this file) | [Writing docs and agent context](docs/documentation.md) |

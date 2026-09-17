@@ -1,6 +1,6 @@
 # agent-context-and-documentation
 
-A reusable template for structuring engineering documentation and agent context on a project.
+A reusable structure for engineering documentation and agent context — usable both as a template to copy into other projects and as the living docs/context store for this project itself, as it grows.
 
 It provides:
 
@@ -19,7 +19,7 @@ Concretely: every agent's instructions route through `AGENTS.md`, and every agen
 | Path | Purpose |
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Entry point for agents. Working principles plus a table routing tasks to guides. |
-| `docs/` | Task-specific guides referenced from `AGENTS.md`. |
+| `docs/` | Task-specific guides referenced from `AGENTS.md` — including [how to write docs in this repo](docs/documentation.md). |
 
 ### Agent compatibility shims
 
@@ -46,10 +46,12 @@ Skills (e.g. reusable `/command`-style capabilities) live once, under [.agents/s
 
 When adding support for a new tool that looks for skills in its own directory, symlink that directory to `.agents/skills` instead of copying files into it — copies drift out of sync with the shared source.
 
-## Using this template
+## Using this structure
 
-Copy the structure into a project, then:
+As a template: copy it into a project, then:
 
 1. Edit `AGENTS.md` with the project's own working principles.
 2. Add a guide under `docs/` for each recurring task category, and add a row to the `AGENTS.md` table pointing to it.
 3. Keep each fact or convention in exactly one document; link to it from elsewhere instead of repeating it.
+
+In place: this repo also grows its own real content the same way — add guides under `docs/` as tasks recur, following [docs/documentation.md](docs/documentation.md)'s style and length rules.

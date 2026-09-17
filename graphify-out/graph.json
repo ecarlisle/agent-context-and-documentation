@@ -1,0 +1,645 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "agent_instruction_shim_pattern",
+        "label": "Agent Instruction File Shim Pattern",
+        "nodes": [
+          "agents_md_entry_point",
+          "claude_md_shim",
+          "github_copilot_instructions_shim"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "README.md"
+      },
+      {
+        "id": "task_guide_routing_pattern",
+        "label": "Task-to-Guide Routing Pattern",
+        "nodes": [
+          "agents_md_task_guide_table",
+          "docs_graphify_skill",
+          "docs_deduplication_policy",
+          "docs_documentation_style_guide"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "AGENTS.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 0,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_author",
+      "community": 0,
+      "norm_label": "author"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "package_keywords",
+      "community": 0,
+      "norm_label": "keywords"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_license",
+      "community": 0,
+      "norm_label": "license"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_main",
+      "community": 0,
+      "norm_label": "main"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 0,
+      "norm_label": "name"
+    },
+    {
+      "label": "packageManager",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_packagemanager",
+      "community": 0,
+      "norm_label": "packagemanager"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 0,
+      "norm_label": "version"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 3,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "package_scripts_test",
+      "community": 3,
+      "norm_label": "test"
+    },
+    {
+      "label": "Task-Specific Guidance Table",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_task_guide_table",
+      "community": 1,
+      "norm_label": "task-specific guidance table"
+    },
+    {
+      "label": "Writing Docs and Agent Context Guide",
+      "file_type": "concept",
+      "source_file": "docs/documentation.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_documentation_style_guide",
+      "community": 1,
+      "norm_label": "writing docs and agent context guide"
+    },
+    {
+      "label": "Graphify Skill Guide",
+      "file_type": "concept",
+      "source_file": "docs/graphify.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_graphify_skill",
+      "community": 1,
+      "norm_label": "graphify skill guide"
+    },
+    {
+      "label": "Shared Skills Directory Pattern",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_shared_skills_directory",
+      "community": 1,
+      "norm_label": "shared skills directory pattern"
+    },
+    {
+      "label": "CodeRabbit Review Configuration",
+      "file_type": "document",
+      "source_file": ".coderabbit.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "coderabbit_config",
+      "community": 1,
+      "norm_label": "coderabbit review configuration"
+    },
+    {
+      "label": "Project README Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_overview",
+      "community": 1,
+      "norm_label": "project readme overview"
+    },
+    {
+      "label": "Deduplication Policy",
+      "file_type": "rationale",
+      "source_file": "docs/deduplication.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_deduplication_policy",
+      "community": 1,
+      "norm_label": "deduplication policy"
+    },
+    {
+      "label": "AGENTS.md Working Principles",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_working_principles",
+      "community": 2,
+      "norm_label": "agents.md working principles"
+    },
+    {
+      "label": "Agent Compatibility Shims Table",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_agent_compatibility_shims",
+      "community": 2,
+      "norm_label": "agent compatibility shims table"
+    },
+    {
+      "label": "AGENTS.md Entry Point",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_entry_point",
+      "community": 2,
+      "norm_label": "agents.md entry point"
+    },
+    {
+      "label": "CLAUDE.md Shim",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_shim",
+      "community": 2,
+      "norm_label": "claude.md shim"
+    },
+    {
+      "label": "Copilot Instructions Shim",
+      "file_type": "document",
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_copilot_instructions_shim",
+      "community": 2,
+      "norm_label": "copilot instructions shim"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_packagemanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_keywords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_scripts",
+      "target": "package_scripts_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.2,
+      "source_file": ".coderabbit.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "coderabbit_config",
+      "target": "readme_overview"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_md_entry_point",
+      "target": "agents_md_task_guide_table"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_md_entry_point",
+      "target": "agents_md_working_principles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_md_task_guide_table",
+      "target": "docs_deduplication_policy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_md_task_guide_table",
+      "target": "docs_documentation_style_guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_md_task_guide_table",
+      "target": "docs_graphify_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_shim",
+      "target": "agents_md_entry_point"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/deduplication.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_deduplication_policy",
+      "target": "agents_md_entry_point"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/deduplication.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_deduplication_policy",
+      "target": "readme_agent_compatibility_shims"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/deduplication.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_deduplication_policy",
+      "target": "readme_shared_skills_directory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/documentation.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_documentation_style_guide",
+      "target": "agents_md_entry_point"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/documentation.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_documentation_style_guide",
+      "target": "docs_deduplication_policy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_copilot_instructions_shim",
+      "target": "agents_md_entry_point"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_compatibility_shims",
+      "target": "claude_md_shim"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_compatibility_shims",
+      "target": "github_copilot_instructions_shim"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "agents_md_entry_point"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "docs_deduplication_policy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "docs_documentation_style_guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "readme_agent_compatibility_shims"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "readme_shared_skills_directory"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "agent_instruction_shim_pattern",
+      "label": "Agent Instruction File Shim Pattern",
+      "nodes": [
+        "agents_md_entry_point",
+        "claude_md_shim",
+        "github_copilot_instructions_shim"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "id": "task_guide_routing_pattern",
+      "label": "Task-to-Guide Routing Pattern",
+      "nodes": [
+        "agents_md_task_guide_table",
+        "docs_graphify_skill",
+        "docs_deduplication_policy",
+        "docs_documentation_style_guide"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md"
+    }
+  ],
+  "built_at_commit": "431678266cabf6ebffc69b6e59201a5ed2f3ff36"
+}
