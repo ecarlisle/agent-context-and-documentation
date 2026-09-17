@@ -11,3 +11,4 @@ When the user types `/graphify`, use the installed graphify skill or instruction
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- After modifying docs (not code), keeping the graph current needs an LLM for semantic extraction. `graphify extract . --backend gemini` (or `kimi|claude|openai|deepseek|ollama`) then `graphify cluster-only .` does this headlessly from the command line if a matching API key is set — see `.env.example` for where to put `GEMINI_API_KEY`. With no backend key configured, semantic re-extraction needs an agent session to act as the LLM (dispatching subagents per `references/extraction-spec.md` in the graphify skill), since there's no other LLM to call it headlessly.

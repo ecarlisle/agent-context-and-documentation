@@ -20,6 +20,7 @@ Concretely: every agent's instructions route through `AGENTS.md`, and every agen
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Entry point for agents. Working principles plus a table routing tasks to guides. |
 | `docs/` | Task-specific guides referenced from `AGENTS.md` — including [how to write docs in this repo](docs/documentation.md). |
+| [.env.example](.env.example) | Template for local secrets (e.g. `GEMINI_API_KEY`). Copy to `.env`, which is gitignored. |
 
 ### Agent compatibility shims
 
@@ -30,7 +31,7 @@ Each supported tool's own instruction-file convention is kept as a thin pointer 
 | Claude Code | `CLAUDE.md` | [CLAUDE.md](CLAUDE.md) imports `AGENTS.md` |
 | Codex | Reads `AGENTS.md` natively | none needed |
 | Gemini CLI | `context.fileName` in `.gemini/settings.json` | [.gemini/settings.json](.gemini/settings.json) points to `AGENTS.md` |
-| GitHub Copilot | `.github/copilot-instructions.md` | [.github/copilot-instructions.md](.github/copilot-instructions.md) points to `AGENTS.md` |
+| GitHub Copilot | Reads `AGENTS.md` natively *for its agent surfaces* (VS Code Copilot Chat/agent mode, Copilot CLI, Copilot cloud agent, Copilot code review); its plain-chat surfaces (Copilot Chat on GitHub.com, Visual Studio, JetBrains, Eclipse, Xcode) only see `.github/copilot-instructions.md` | [.github/copilot-instructions.md](.github/copilot-instructions.md) points to `AGENTS.md`, for the surfaces that don't read it natively |
 | Cursor | `.cursor/rules/*.mdc` | [.cursor/rules/agents.mdc](.cursor/rules/agents.mdc) imports `AGENTS.md` |
 
 Additional harnesses that already read `AGENTS.md` (or `CLAUDE.md`) natively, with no shim required: **OpenCode** and **Pi**.
