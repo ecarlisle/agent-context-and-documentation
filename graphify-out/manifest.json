@@ -45,7 +45,7 @@
     "mtime": 1789673336.280853,
     "seen": 1789674497.82046,
     "ast_hash": "b445747df03f7fdc1bdba495de37eef9",
-    "semantic_hash": "b445747df03f7fdc1bdba495de37eef9"
+    "semantic_hash": ""
   },
   "docs/deduplication.md": {
     "mtime": 1789672635.9322789,
@@ -60,9 +60,15 @@
     "semantic_hash": "9731ceeabcf05154e1334576483fe99c"
   },
   "docs/graphify.md": {
-    "mtime": 1789673812.2984397,
-    "seen": 1789674497.820461,
-    "ast_hash": "bed9b2f592d5af6baee07fa15ad4f960",
-    "semantic_hash": "bed9b2f592d5af6baee07fa15ad4f960"
+    "mtime": 1789675062.24332,
+    "seen": 1789675373.586763,
+    "ast_hash": "a6a3622980e6f65aded9d1f2066e7fd6",
+    "semantic_hash": "a6a3622980e6f65aded9d1f2066e7fd6"
+  },
+  "scripts/update-graph.sh": {
+    "mtime": 1789675332.8937044,
+    "seen": 1789675373.586741,
+    "ast_hash": "9e1703822e8b66965da3f174213d8eb4",
+    "semantic_hash": "9e1703822e8b66965da3f174213d8eb4"
   }
 }

@@ -1,40 +1,48 @@
 # Graph Report - agent-context-and-documentation  (2026-09-17)
 
 ## Corpus Check
-- Corpus is ~1,293 words - fits in a single context window. You may not need a graph.
+- cluster-only mode — file stats not available
 
 ## Summary
-- 23 nodes · 30 edges · 4 communities (3 shown, 1 thin omitted)
-- Extraction: 97% EXTRACTED · 0% INFERRED · 3% AMBIGUOUS
-- Token cost: 58,000 input · 13,301 output
+- 26 nodes · 22 edges · 8 communities (2 shown, 6 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- Token cost: 217 input · 53 output
+
+## Graph Freshness
+- Built from commit: `18fdc4f1`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Package Manifest
-- Docs & Skills Guides
-- AGENTS.md Entry Point & Shims
-- Package Scripts
+- Package Metadata
+- AI Agent Guidelines
+- Graphify Tooling
+- Scripts and Testing
+- Graph Update Script
+- .agents/skills/
+- CodeRabbit Review Configuration
 
 ## God Nodes (most connected - your core abstractions)
-1. `AGENTS.md Entry Point` - 7 edges
-2. `Project README Overview` - 6 edges
-3. `Deduplication Policy` - 6 edges
-4. `Task-Specific Guidance Table` - 4 edges
-5. `Agent Compatibility Shims Table` - 4 edges
-6. `Writing Docs and Agent Context Guide` - 4 edges
-7. `scripts` - 2 edges
-8. `Copilot Instructions Shim` - 2 edges
-9. `CLAUDE.md Shim` - 2 edges
-10. `Shared Skills Directory Pattern` - 2 edges
+1. `AGENTS.md Entry Point` - 6 edges
+2. `Task-Specific Guidance Table` - 3 edges
+3. `Writing Docs and Agent Context Guide` - 3 edges
+4. `Deduplication Policy` - 3 edges
+5. `scripts` - 2 edges
+6. `author` - 1 edges
+7. `keywords` - 1 edges
+8. `license` - 1 edges
+9. `main` - 1 edges
+10. `packageManager` - 1 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `CodeRabbit Review Configuration` --conceptually_related_to--> `Project README Overview`  [AMBIGUOUS]
-  .coderabbit.yaml → README.md
-- `Copilot Instructions Shim` --references--> `AGENTS.md Entry Point`  [EXTRACTED]
-  .github/copilot-instructions.md → AGENTS.md
 - `CLAUDE.md Shim` --references--> `AGENTS.md Entry Point`  [EXTRACTED]
   CLAUDE.md → AGENTS.md
-- `Deduplication Policy` --references--> `AGENTS.md Entry Point`  [EXTRACTED]
-  docs/deduplication.md → AGENTS.md
+- `Copilot Instructions Shim` --references--> `AGENTS.md Entry Point`  [EXTRACTED]
+  .github/copilot-instructions.md → AGENTS.md
+- `Task-Specific Guidance Table` --references--> `Deduplication Policy`  [EXTRACTED]
+  AGENTS.md → docs/deduplication.md
+- `Task-Specific Guidance Table` --references--> `Writing Docs and Agent Context Guide`  [EXTRACTED]
+  AGENTS.md → docs/documentation.md
 - `Writing Docs and Agent Context Guide` --references--> `AGENTS.md Entry Point`  [EXTRACTED]
   docs/documentation.md → AGENTS.md
 
@@ -42,42 +50,28 @@
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Agent Instruction File Shim Pattern** — agents_md_entry_point, claude_md_shim, github_copilot_instructions_shim [EXTRACTED 1.00]
-- **Task-to-Guide Routing Pattern** — agents_md_task_guide_table, docs_graphify_skill, docs_deduplication_policy, docs_documentation_style_guide [EXTRACTED 1.00]
+- **Graphify Knowledge Management** — docs_graphify, docs_graphify_out, docs_graphify_tool [EXTRACTED 1.00]
+- **Task-to-Guide Routing Pattern** — agents_md_task_guide_table, docs_deduplication_policy, docs_documentation_style_guide [EXTRACTED 1.00]
 
-## Communities (4 total, 1 thin omitted)
+## Communities (8 total, 6 thin omitted)
 
-### Community 0 - "Package Manifest"
+### Community 0 - "Package Metadata"
 Cohesion: 0.22
 Nodes (8): author, description, keywords, license, main, name, packageManager, version
 
-### Community 1 - "Docs & Skills Guides"
+### Community 1 - "AI Agent Guidelines"
 Cohesion: 0.43
-Nodes (7): Task-Specific Guidance Table, CodeRabbit Review Configuration, Deduplication Policy, Writing Docs and Agent Context Guide, Graphify Skill Guide, Project README Overview, Shared Skills Directory Pattern
-
-### Community 2 - "AGENTS.md Entry Point & Shims"
-Cohesion: 0.50
-Nodes (5): AGENTS.md Entry Point, AGENTS.md Working Principles, CLAUDE.md Shim, Copilot Instructions Shim, Agent Compatibility Shims Table
-
-## Ambiguous Edges - Review These
-- `CodeRabbit Review Configuration` → `Project README Overview`  [AMBIGUOUS]
-  .coderabbit.yaml · relation: conceptually_related_to
+Nodes (7): AGENTS.md Entry Point, Task-Specific Guidance Table, AGENTS.md Working Principles, CLAUDE.md Shim, Deduplication Policy, Writing Docs and Agent Context Guide, Copilot Instructions Shim
 
 ## Knowledge Gaps
-- **12 isolated node(s):** `name`, `version`, `description`, `main`, `test` (+7 more)
-  These have ≤1 connection - possible missing edges or undocumented components.
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **17 isolated node(s):** `author`, `description`, `keywords`, `license`, `main` (+12 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 19 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What is the exact relationship between `CodeRabbit Review Configuration` and `Project README Overview`?**
-  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `AGENTS.md Entry Point` connect `AGENTS.md Entry Point & Shims` to `Docs & Skills Guides`?**
-  _High betweenness centrality (0.095) - this node is a cross-community bridge._
-- **Why does `Project README Overview` connect `Docs & Skills Guides` to `AGENTS.md Entry Point & Shims`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
-- **Why does `Task-Specific Guidance Table` connect `Docs & Skills Guides` to `AGENTS.md Entry Point & Shims`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `description` to the rest of the system?**
-  _12 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `scripts` connect `Scripts and Testing` to `Package Metadata`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **What connects `author`, `description`, `keywords` to the rest of the system?**
+  _17 weakly-connected nodes found - possible documentation gaps or missing edges._

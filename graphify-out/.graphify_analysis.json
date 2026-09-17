@@ -1,0 +1,177 @@
+{
+  "communities": {
+    "0": [
+      "package",
+      "package_author",
+      "package_description",
+      "package_keywords",
+      "package_license",
+      "package_main",
+      "package_name",
+      "package_packagemanager",
+      "package_version"
+    ],
+    "1": [
+      "agents_md_entry_point",
+      "agents_md_task_guide_table",
+      "agents_md_working_principles",
+      "claude_md_shim",
+      "docs_deduplication_policy",
+      "docs_documentation_style_guide",
+      "github_copilot_instructions_shim"
+    ],
+    "2": [
+      "docs_graphify",
+      "docs_graphify_out",
+      "docs_graphify_tool"
+    ],
+    "3": [
+      "package_scripts",
+      "package_scripts_test"
+    ],
+    "4": [
+      "scripts_update_graph",
+      "scripts_update_graph_sh__entry"
+    ],
+    "5": [
+      "agents_skills"
+    ],
+    "6": [
+      "coderabbit_config"
+    ],
+    "7": [
+      "readme"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2222222222222222,
+    "1": 0.42857142857142855,
+    "2": 0.6666666666666666,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0
+  },
+  "gods": [
+    {
+      "id": "agents_md_entry_point",
+      "label": "AGENTS.md Entry Point",
+      "degree": 6
+    },
+    {
+      "id": "agents_md_task_guide_table",
+      "label": "Task-Specific Guidance Table",
+      "degree": 3
+    },
+    {
+      "id": "docs_documentation_style_guide",
+      "label": "Writing Docs and Agent Context Guide",
+      "degree": 3
+    },
+    {
+      "id": "docs_deduplication_policy",
+      "label": "Deduplication Policy",
+      "degree": 3
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 2
+    },
+    {
+      "id": "package_author",
+      "label": "author",
+      "degree": 1
+    },
+    {
+      "id": "package_keywords",
+      "label": "keywords",
+      "degree": 1
+    },
+    {
+      "id": "package_license",
+      "label": "license",
+      "degree": 1
+    },
+    {
+      "id": "package_main",
+      "label": "main",
+      "degree": 1
+    },
+    {
+      "id": "package_packagemanager",
+      "label": "packageManager",
+      "degree": 1
+    }
+  ],
+  "surprises": [
+    {
+      "source": "CLAUDE.md Shim",
+      "target": "AGENTS.md Entry Point",
+      "source_files": [
+        "CLAUDE.md",
+        "AGENTS.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `CLAUDE.md Shim` unexpectedly reaches hub `AGENTS.md Entry Point`"
+    },
+    {
+      "source": "Copilot Instructions Shim",
+      "target": "AGENTS.md Entry Point",
+      "source_files": [
+        ".github/copilot-instructions.md",
+        "AGENTS.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Copilot Instructions Shim` unexpectedly reaches hub `AGENTS.md Entry Point`"
+    },
+    {
+      "source": "Task-Specific Guidance Table",
+      "target": "Deduplication Policy",
+      "source_files": [
+        "AGENTS.md",
+        "docs/deduplication.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Task-Specific Guidance Table",
+      "target": "Writing Docs and Agent Context Guide",
+      "source_files": [
+        "AGENTS.md",
+        "docs/documentation.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Writing Docs and Agent Context Guide",
+      "target": "AGENTS.md Entry Point",
+      "source_files": [
+        "docs/documentation.md",
+        "AGENTS.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `scripts` connect `Scripts and Testing` to `Package Metadata`?",
+      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `author`, `description`, `keywords` to the rest of the system?",
+      "why": "17 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
