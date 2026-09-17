@@ -306,6 +306,7 @@
     {
       "id": "docs_graphify_out",
       "label": "graphify-out/",
+      "_origin": "semantic",
       "community": 2,
       "community_name": "Graphify Tooling",
       "file_type": "concept",
@@ -316,6 +317,7 @@
     {
       "id": "docs_graphify_tool",
       "label": "Graphify CLI",
+      "_origin": "semantic",
       "community": 2,
       "community_name": "Graphify Tooling",
       "file_type": "concept",
@@ -326,6 +328,7 @@
     {
       "id": "docs_graphify",
       "label": "docs/graphify.md",
+      "_origin": "semantic",
       "community": 2,
       "community_name": "Graphify Tooling",
       "file_type": "document",
@@ -477,6 +480,16 @@
       "weight": 1.0
     },
     {
+      "source": "docs_graphify",
+      "target": "docs_graphify_tool",
+      "relation": "calls",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "rationale": "Instructions for running graphify query, update, and extract commands.",
+      "source_file": "docs/graphify.md"
+    },
+    {
       "source": "agents_md_entry_point",
       "target": "agents_md_task_guide_table",
       "relation": "references",
@@ -565,6 +578,15 @@
       "weight": 1.0
     },
     {
+      "source": "docs_graphify",
+      "target": "docs_graphify_out",
+      "relation": "references",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/graphify.md"
+    },
+    {
       "source": "github_copilot_instructions_shim",
       "target": "agents_md_entry_point",
       "relation": "references",
@@ -574,23 +596,6 @@
       "source_file": ".github/copilot-instructions.md",
       "source_location": null,
       "weight": 1.0
-    },
-    {
-      "source": "docs_graphify",
-      "target": "docs_graphify_tool",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "rationale": "Instructions for running graphify query, update, and extract commands.",
-      "source_file": "docs/graphify.md"
-    },
-    {
-      "source": "docs_graphify",
-      "target": "docs_graphify_out",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/graphify.md"
     }
   ],
   "hyperedges": [
@@ -621,5 +626,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "18fdc4f1a2fe5547751bbf91af6869a999afc34e"
+  "built_at_commit": "9f995c92e8528374335d9633889f049047bcb37c"
 }

@@ -6,10 +6,10 @@
 ## Summary
 - 26 nodes · 22 edges · 8 communities (2 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 217 input · 53 output
+- Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `18fdc4f1`
+- Built from commit: `9f995c92`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
