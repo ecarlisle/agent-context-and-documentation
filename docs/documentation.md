@@ -1,5 +1,7 @@
 # Writing docs and agent context
 
+**Use when:** Writing or editing any doc here
+
 Read this before writing or editing any doc in this repo, including `AGENTS.md` and `README.md`.
 
 ## Style
@@ -9,6 +11,7 @@ Read this before writing or editing any doc in this repo, including `AGENTS.md` 
 - Prefer short declarative sentences and tables over prose paragraphs.
 - Cut anything a reader doesn't need to act or decide correctly. If a sentence doesn't change what the reader does next, remove it.
 - One authoritative source per fact — link to it, never restate it (see [Deduplication policy](deduplication.md)).
+- Every doc under `docs/` opens with `**Use when:** <trigger>` right after the title. This line is the doc's own authoritative trigger — it is what makes the doc self-describing instead of depending on `AGENTS.md`'s table to remember its condition correctly.
 
 ## Length
 
@@ -20,6 +23,8 @@ Read this before writing or editing any doc in this repo, including `AGENTS.md` 
 `AGENTS.md` is always loaded — every agent, every session, every task, regardless of whether any row applies. Its table's own size is therefore the one place in this repo where progressive disclosure doesn't apply by default: the linked guides are lazy, but the rows describing them are not. This shapes how the table must be written and when it must change shape.
 
 **Row format**: a row is a name plus a short trigger, not a sentence describing the task. Decision logic (e.g. "check whether X exists first") belongs inside the linked doc, not the row — the row's only job is deciding whether to open that doc, and the doc's job is what to do once there. Compare `docs/graphify.md`, which holds the existence-check/nudge logic that the table row does not restate.
+
+**The doc's `**Use when:**` line is authoritative; the table row is a copy of it, not an independent description.** This is what keeps the table from silently drifting out of sync with what a doc actually covers: when a doc's trigger changes, update its own `**Use when:**` line first, then copy that same text into its `AGENTS.md` row. If the two ever disagree, the doc's line wins and the row is wrong.
 
 **Cap**: keep the table at 8 rows or fewer. Before adding a 9th, first check whether it's really a new category or a narrower case of an existing row (e.g. don't add a separate row per export flag when one "graphify tasks" row already covers it) — consolidate rather than append.
 

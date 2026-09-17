@@ -1,5 +1,7 @@
 # Deduplication policy
 
+**Use when:** Agent/harness support, or adding a skill
+
 Every coding agent and harness reads its instructions and skills from one shared source, never a per-tool copy:
 
 - **Instructions**: [AGENTS.md](../AGENTS.md) is the single source of truth. A tool that expects its own instruction file (`CLAUDE.md`, `.cursor/rules/*.mdc`, `.github/copilot-instructions.md`, `.gemini/settings.json`, ...) gets a thin pointer back to `AGENTS.md`, not a duplicated copy. See [README.md](../README.md#agent-compatibility-shims) for the current shim list.

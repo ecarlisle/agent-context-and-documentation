@@ -1,5 +1,7 @@
 # Graphify
 
+**Use when:** `/graphify`, or codebase/architecture/file-relationship questions
+
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
 
 When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
