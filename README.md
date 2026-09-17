@@ -1,22 +1,55 @@
-# AGENTS.md
-This repository maintains shared context and documentation for humans and agents.
+# agent-context-and-documentation
 
-## Core rules
+A reusable template for structuring engineering documentation and agent context on a project.
 
-- Keep each fact or policy in one authoritative document; link to it elsewhere.
-- Update affected documentation when changing a convention or decision.
-- Keep this file focused on essential rules and task-specific reading routes.
+It provides:
 
-## Read as needed
+- A single, concise entry point for coding agents ([AGENTS.md](AGENTS.md)), which routes to task-specific guides only when needed.
+- A `docs/` directory for the supporting guides those tasks reference.
+- Compatibility shims for agent tools that look for their own instruction file, pointing each one back to `AGENTS.md` instead of duplicating its content.
 
-Before making changes, read the documents relevant to the task.
+## Why
 
-| Task | Read |
-|---|---|
-| Understand the repository’s purpose and scope | `README.md` |
-| Find existing information or choose where new content belongs | `docs/index.md` |
-| Write, restructure, or review documentation | `docs/documentation.md` |
-| Propose or reconsider an organizational decision | `docs/decisions/index.md`, then relevant decisions |
-| Validate changes | `CONTRIBUTING.md` |
+Keeping documentation scattered or duplicated across multiple agent-specific files causes drift — the same fact gets stated (and edited) in more than one place, and stale copies pile up. This template keeps one authoritative source per fact, loaded only when it's relevant to the task at hand.
 
-Follow additional references when needed to resolve the task. Avoid loading unrelated documentation.
+Concretely: every agent's instructions route through `AGENTS.md`, and every agent's skills live in one shared `.agents/skills/` directory — see [docs/deduplication.md](docs/deduplication.md) for the rule, and the sections below for how each tool is wired to it.
+
+## Layout
+
+| Path | Purpose |
+| --- | --- |
+| [AGENTS.md](AGENTS.md) | Entry point for agents. Working principles plus a table routing tasks to guides. |
+| `docs/` | Task-specific guides referenced from `AGENTS.md`. |
+
+### Agent compatibility shims
+
+Each supported tool's own instruction-file convention is kept as a thin pointer back to `AGENTS.md`, so there's still one authoritative source.
+
+| Agent | Convention | Shim in this repo |
+| --- | --- | --- |
+| Claude Code | `CLAUDE.md` | [CLAUDE.md](CLAUDE.md) imports `AGENTS.md` |
+| Codex | Reads `AGENTS.md` natively | none needed |
+| Gemini CLI | `context.fileName` in `.gemini/settings.json` | [.gemini/settings.json](.gemini/settings.json) points to `AGENTS.md` |
+| GitHub Copilot | `.github/copilot-instructions.md` | [.github/copilot-instructions.md](.github/copilot-instructions.md) points to `AGENTS.md` |
+| Cursor | `.cursor/rules/*.mdc` | [.cursor/rules/agents.mdc](.cursor/rules/agents.mdc) imports `AGENTS.md` |
+
+Additional harnesses that already read `AGENTS.md` (or `CLAUDE.md`) natively, with no shim required: **OpenCode** and **Pi**.
+
+### Shared skills directory
+
+Skills (e.g. reusable `/command`-style capabilities) live once, under [.agents/skills/](.agents/skills/). Tool-specific skill directories are symlinks to that shared folder rather than copies, so a skill is written once and every tool sees it:
+
+```
+.claude/skills -> ../.agents/skills
+.codex/skills  -> ../.agents/skills
+```
+
+When adding support for a new tool that looks for skills in its own directory, symlink that directory to `.agents/skills` instead of copying files into it — copies drift out of sync with the shared source.
+
+## Using this template
+
+Copy the structure into a project, then:
+
+1. Edit `AGENTS.md` with the project's own working principles.
+2. Add a guide under `docs/` for each recurring task category, and add a row to the `AGENTS.md` table pointing to it.
+3. Keep each fact or convention in exactly one document; link to it from elsewhere instead of repeating it.
