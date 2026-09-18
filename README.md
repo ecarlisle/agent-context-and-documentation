@@ -1,4 +1,4 @@
-# agent-context-and-documentation
+# Agent Context an Documentation
 
 A reusable structure for engineering documentation and agent context — usable both as a template to copy into other projects and as the living docs/context store for this project itself, as it grows.
 
