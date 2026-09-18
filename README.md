@@ -32,7 +32,7 @@ Each supported tool's own instruction-file convention is kept as a thin pointer 
 | Codex | Reads `AGENTS.md` natively | none needed |
 | Gemini CLI | `context.fileName` in `.gemini/settings.json` | [.gemini/settings.json](.gemini/settings.json) points to `AGENTS.md` |
 | GitHub Copilot | Reads `AGENTS.md` natively *for its agent surfaces* (VS Code Copilot Chat/agent mode, Copilot CLI, Copilot cloud agent, Copilot code review); its plain-chat surfaces (Copilot Chat on GitHub.com, Visual Studio, JetBrains, Eclipse, Xcode) only see `.github/copilot-instructions.md` | [.github/copilot-instructions.md](.github/copilot-instructions.md) points to `AGENTS.md`, for the surfaces that don't read it natively |
-| Cursor | `.cursor/rules/*.mdc` | [.cursor/rules/agents.mdc](.cursor/rules/agents.mdc) imports `AGENTS.md` |
+| Cursor | Reads `AGENTS.md` natively | none needed |
 
 Additional harnesses that already read `AGENTS.md` (or `CLAUDE.md`) natively, with no shim required: **OpenCode** and **Pi**.
 

@@ -9,9 +9,9 @@ This repository develops a simple, reusable structure for engineering documentat
 - Surface uncertainty when it materially affects the approach.
 - Verify the outcome with checks appropriate to the change.
 
-## Task-specific guidances
+## Task-specific guidance
 
-Read the relevant guide before starting a matching task. Load other documentation only as needed. Row format and growth rules: [AGENTS.md's task table](docs/task-table.md).
+Read each guide whose trigger matches the task. Load other documentation only as needed.
 
 | Trigger | Guide |
 | --- | --- |

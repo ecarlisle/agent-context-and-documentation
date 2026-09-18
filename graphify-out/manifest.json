@@ -1,74 +1,22 @@
 {
   ".gemini/settings.json": {
     "mtime": 1789668120.8710904,
-    "seen": 1789674497.8204532,
     "ast_hash": "3c7bc29d2537e5c6c7ec8ba347cac419",
     "semantic_hash": "3c7bc29d2537e5c6c7ec8ba347cac419"
   },
   "package.json": {
     "mtime": 1789666000.5592668,
-    "seen": 1789674497.820456,
     "ast_hash": "06b9530f1d6c670b9f95c0c2c0fb6ec7",
     "semantic_hash": "06b9530f1d6c670b9f95c0c2c0fb6ec7"
   },
-  "skills-lock.json": {
-    "mtime": 1789669147.4806092,
-    "seen": 1789674497.820457,
-    "ast_hash": "811228036654d189c6b32a2c873bfb88",
-    "semantic_hash": "811228036654d189c6b32a2c873bfb88"
-  },
-  ".coderabbit.yaml": {
-    "mtime": 1789668745.3667424,
-    "seen": 1789674497.820458,
-    "ast_hash": "ab15d3e498b0e4d90ae49244c3493b4c",
-    "semantic_hash": "ab15d3e498b0e4d90ae49244c3493b4c"
-  },
-  ".github/copilot-instructions.md": {
-    "mtime": 1789671857.5358899,
-    "seen": 1789674497.820458,
-    "ast_hash": "06a479ed52e831ce4c6f767687813152",
-    "semantic_hash": "06a479ed52e831ce4c6f767687813152"
-  },
-  "AGENTS.md": {
-    "mtime": 1789673816.8524957,
-    "seen": 1789674497.820459,
-    "ast_hash": "02a7f5fcc2072861ee54d75a21e43d39",
-    "semantic_hash": "02a7f5fcc2072861ee54d75a21e43d39"
-  },
-  "CLAUDE.md": {
-    "mtime": 1789668120.870934,
-    "seen": 1789674497.82046,
-    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
-    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
-  },
-  "README.md": {
-    "mtime": 1789675092.230942,
-    "seen": 1789679364.90355,
-    "ast_hash": "ca33eabf4885ef7e152e574af0dfeb27",
-    "semantic_hash": "ca33eabf4885ef7e152e574af0dfeb27"
-  },
-  "docs/deduplication.md": {
-    "mtime": 1789672635.9322789,
-    "seen": 1789674497.82046,
-    "ast_hash": "d59c3c2546665221600d076cf74cc1c4",
-    "semantic_hash": "d59c3c2546665221600d076cf74cc1c4"
-  },
-  "docs/documentation.md": {
-    "mtime": 1789673311.3125253,
-    "seen": 1789674497.820461,
-    "ast_hash": "9731ceeabcf05154e1334576483fe99c",
-    "semantic_hash": "9731ceeabcf05154e1334576483fe99c"
-  },
-  "docs/graphify.md": {
-    "mtime": 1789675062.24332,
-    "seen": 1789675373.586763,
-    "ast_hash": "a6a3622980e6f65aded9d1f2066e7fd6",
-    "semantic_hash": "a6a3622980e6f65aded9d1f2066e7fd6"
-  },
   "scripts/update-graph.sh": {
     "mtime": 1789675332.8937044,
-    "seen": 1789675373.586741,
     "ast_hash": "9e1703822e8b66965da3f174213d8eb4",
     "semantic_hash": "9e1703822e8b66965da3f174213d8eb4"
+  },
+  "skills-lock.json": {
+    "mtime": 1789669147.4806092,
+    "ast_hash": "811228036654d189c6b32a2c873bfb88",
+    "semantic_hash": "811228036654d189c6b32a2c873bfb88"
   }
 }

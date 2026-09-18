@@ -1,177 +1,127 @@
 {
   "communities": {
     "0": [
-      "package",
-      "package_author",
-      "package_description",
-      "package_keywords",
-      "package_license",
-      "package_main",
-      "package_name",
-      "package_packagemanager",
-      "package_version"
+      "users_eric_repos_agent_context_and_documentation_package_author",
+      "users_eric_repos_agent_context_and_documentation_package_description",
+      "users_eric_repos_agent_context_and_documentation_package_json",
+      "users_eric_repos_agent_context_and_documentation_package_keywords",
+      "users_eric_repos_agent_context_and_documentation_package_license",
+      "users_eric_repos_agent_context_and_documentation_package_main",
+      "users_eric_repos_agent_context_and_documentation_package_name",
+      "users_eric_repos_agent_context_and_documentation_package_packagemanager",
+      "users_eric_repos_agent_context_and_documentation_package_version"
     ],
     "1": [
-      "agents_md_entry_point",
-      "agents_md_task_guide_table",
-      "agents_md_working_principles",
-      "claude_md_shim",
-      "docs_deduplication_policy",
-      "docs_documentation_style_guide",
-      "github_copilot_instructions_shim"
+      "agents",
+      "claude",
+      "docs_graphify",
+      "docs_task_table",
+      "github_copilot_instructions"
     ],
     "2": [
-      "docs_graphify",
-      "docs_graphify_out",
-      "docs_graphify_tool"
+      "agents_skills",
+      "docs_deduplication",
+      "docs_documentation",
+      "readme"
     ],
     "3": [
-      "package_scripts",
-      "package_scripts_test"
+      "users_eric_repos_agent_context_and_documentation_package_scripts",
+      "users_eric_repos_agent_context_and_documentation_package_scripts_test"
     ],
     "4": [
-      "scripts_update_graph",
-      "scripts_update_graph_sh__entry"
+      "users_eric_repos_agent_context_and_documentation_scripts_update_graph_sh",
+      "users_eric_repos_agent_context_and_documentation_scripts_update_graph_sh__entry"
     ],
     "5": [
-      "agents_skills"
-    ],
-    "6": [
-      "coderabbit_config"
-    ],
-    "7": [
-      "readme"
+      "coderabbit_yaml"
     ]
   },
   "cohesion": {
     "0": 0.2222222222222222,
-    "1": 0.42857142857142855,
-    "2": 0.6666666666666666,
+    "1": 0.4,
+    "2": 0.8333333333333334,
     "3": 1.0,
     "4": 1.0,
-    "5": 1.0,
-    "6": 1.0,
-    "7": 1.0
+    "5": 1.0
   },
   "gods": [
     {
-      "id": "agents_md_entry_point",
-      "label": "AGENTS.md Entry Point",
-      "degree": 6
+      "id": "docs_deduplication",
+      "label": "Deduplication policy",
+      "degree": 4
     },
     {
-      "id": "agents_md_task_guide_table",
-      "label": "Task-Specific Guidance Table",
+      "id": "docs_documentation",
+      "label": "Writing docs and agent context",
       "degree": 3
     },
     {
-      "id": "docs_documentation_style_guide",
-      "label": "Writing Docs and Agent Context Guide",
-      "degree": 3
-    },
-    {
-      "id": "docs_deduplication_policy",
-      "label": "Deduplication Policy",
-      "degree": 3
-    },
-    {
-      "id": "package_scripts",
+      "id": "users_eric_repos_agent_context_and_documentation_package_scripts",
       "label": "scripts",
       "degree": 2
     },
     {
-      "id": "package_author",
-      "label": "author",
-      "degree": 1
+      "id": "agents_skills",
+      "label": ".agents/skills/",
+      "degree": 2
     },
     {
-      "id": "package_keywords",
-      "label": "keywords",
-      "degree": 1
-    },
-    {
-      "id": "package_license",
-      "label": "license",
-      "degree": 1
-    },
-    {
-      "id": "package_main",
+      "id": "users_eric_repos_agent_context_and_documentation_package_main",
       "label": "main",
       "degree": 1
     },
     {
-      "id": "package_packagemanager",
+      "id": "users_eric_repos_agent_context_and_documentation_package_scripts_test",
+      "label": "test",
+      "degree": 1
+    },
+    {
+      "id": "users_eric_repos_agent_context_and_documentation_package_keywords",
+      "label": "keywords",
+      "degree": 1
+    },
+    {
+      "id": "users_eric_repos_agent_context_and_documentation_package_author",
+      "label": "author",
+      "degree": 1
+    },
+    {
+      "id": "users_eric_repos_agent_context_and_documentation_package_license",
+      "label": "license",
+      "degree": 1
+    },
+    {
+      "id": "users_eric_repos_agent_context_and_documentation_package_packagemanager",
       "label": "packageManager",
       "degree": 1
     }
   ],
   "surprises": [
     {
-      "source": "CLAUDE.md Shim",
-      "target": "AGENTS.md Entry Point",
+      "source": "Deduplication policy",
+      "target": ".agents/skills/",
       "source_files": [
-        "CLAUDE.md",
-        "AGENTS.md"
+        "docs/deduplication.md",
+        "README.md"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "connects across different repos/directories; peripheral node `CLAUDE.md Shim` unexpectedly reaches hub `AGENTS.md Entry Point`"
+      "why": "connects across different repos/directories"
     },
     {
-      "source": "Copilot Instructions Shim",
-      "target": "AGENTS.md Entry Point",
+      "source": "Writing docs and agent context",
+      "target": "Deduplication policy",
       "source_files": [
-        ".github/copilot-instructions.md",
-        "AGENTS.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories; peripheral node `Copilot Instructions Shim` unexpectedly reaches hub `AGENTS.md Entry Point`"
-    },
-    {
-      "source": "Task-Specific Guidance Table",
-      "target": "Deduplication Policy",
-      "source_files": [
-        "AGENTS.md",
+        "docs/documentation.md",
         "docs/deduplication.md"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "Task-Specific Guidance Table",
-      "target": "Writing Docs and Agent Context Guide",
-      "source_files": [
-        "AGENTS.md",
-        "docs/documentation.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "Writing Docs and Agent Context Guide",
-      "target": "AGENTS.md Entry Point",
-      "source_files": [
-        "docs/documentation.md",
-        "AGENTS.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
+      "why": "cross-file semantic connection"
     }
   ],
-  "questions": [
-    {
-      "type": "bridge_node",
-      "question": "Why does `scripts` connect `Scripts and Testing` to `Package Metadata`?",
-      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
-    },
-    {
-      "type": "isolated_nodes",
-      "question": "What connects `author`, `description`, `keywords` to the rest of the system?",
-      "why": "17 weakly-connected nodes found - possible documentation gaps or missing edges."
-    }
-  ]
+  "tokens": {
+    "input": 4221,
+    "output": 995
+  }
 }

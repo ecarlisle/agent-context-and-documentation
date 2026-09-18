@@ -1,1 +1,9 @@
-{"0": "Package Metadata", "1": "AI Agent Guidelines", "2": "Graphify Tooling", "3": "Scripts and Testing", "4": "Graph Update Script", "5": ".agents/skills/", "6": "CodeRabbit Review Configuration", "7": "README.md"}
+{
+  "0": "Package Metadata",
+  "1": "Shared Agent Context",
+  "2": "Task Documentation Guides",
+  "3": "Scripts and Testing",
+  "4": "Graph Maintenance",
+  "5": "Working Principles",
+  "6": "Code Review Configuration"
+}
